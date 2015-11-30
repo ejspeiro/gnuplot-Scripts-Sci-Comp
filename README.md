@@ -18,12 +18,12 @@ The scripts are classified according to the mathematical nature of the data
 they intend to plot.
 
 1. 1D scalar fields.
-  1.1. Computed.
-  1.2. Control.
-  1.3. Comparison of Computed with Control.
+  1. Computed.
+  2. Control.
+  3. Comparison of Computed with Control.
 
 2. Matrices.
-  2.1. Sparse Matrix.
+  1. Sparse Matrix.
 
 ## 3. Tested with...
 
