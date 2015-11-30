@@ -1,6 +1,6 @@
 # \file sparse_matrix.gp
 #
-# \brief Plots data from a sparse matrix..
+# \brief Plots data from a sparse matrix.
 #
 # Use this script when building sparse matrices, to check their sparsity
 # pattern.
