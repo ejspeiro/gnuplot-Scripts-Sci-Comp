@@ -51,10 +51,9 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 set termoption dash
 
 # Data visualization.
-# Style 1 for analytic/control data.
-set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.2
-# Style 2 for computed data.
+# Style for computed data.
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
+set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Axes.
 set autoscale fix
@@ -67,4 +66,4 @@ set ylabel "$u(x)$"
 set title "Computed Solution"
 unset key
 
-plot dat_file_name.".dat" u 1:2:xtic(1) w p ls 2
+plot dat_file_name.".dat" u 1:2:2:xtic(1) w p ls 2 palette

@@ -53,9 +53,10 @@ set termoption dash
 
 # Data visualization.
 # Style 1 for analytic/control data.
-set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.2
+set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 # Style 2 for computed data.
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
+set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Axes.
 set autoscale fix
@@ -69,5 +70,7 @@ set title "Control and Computed Solution"
 set key bmargin center horizontal
 
 plot \
-  "1d_scalar_field_control.dat" u 1:2:xtic(1) title "Control" w lp ls 1, \
-  "1d_scalar_field_computed.dat" u 1:2:xtic(1) title "Computed" w p ls 2
+  "1d_scalar_field_control.dat" u 1:2:2:xtic(1) title "Control" \
+  w lp ls 1 palette, \
+  "1d_scalar_field_computed.dat" u 1:2:2:xtic(1) title "Computed" \
+  w p ls 2 palette
