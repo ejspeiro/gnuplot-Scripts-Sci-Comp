@@ -1,4 +1,4 @@
-# gnuplot: Scripts for Scientific Visualization.
+# gnuplot: Scripts for Scientific Computing.
 
 By: **Eduardo J. Sanchez, Ph.D. - esanchez at mail dot sdsu dot edu**
     __________________________________________________________________
