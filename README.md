@@ -14,11 +14,26 @@ I collect them here as I develop them for my own software:
 
 ## 2. Index of Scripts
 
+The scripts are classified according to the mathematical nature of the data
+they intend to plot.
 
+1. 1D scalar fields.
+  1.1. Computed.
+  1.2. Control.
+  1.3. Comparison of Computed with Control.
+
+2. Matrices.
+  2.1. Sparse Matrix.
 
 ## 3. Tested with...
 
+So far, I have tested these scripts on these architectures:
 
+```
+1. Linux 3.16.7-29-desktop #1 SMP PREEMPT (6be6a97) x86_64 GNU/Linux
+   Intel(R) Core(TM) i7-4600U CPU 2.10 GHz 4096 KB of cache and a stepping of 1.
+   gnuplot 4.6 patchlevel 5
+```
 
 ## 4. Contact, Support, and Credits
 
