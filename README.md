@@ -29,8 +29,8 @@ they intend to plot.
 So far, I have tested these scripts on these architectures:
 
 ```
-1. Linux 3.16.7-29-desktop #1 SMP PREEMPT (6be6a97) x86_64 GNU/Linux
-   Intel(R) Core(TM) i7-4600U CPU 2.10 GHz 4096 KB of cache and a stepping of 1.
+1. Intel(R) Core(TM) i7-4600U CPU 2.10 GHz 4096 KB of cache and a stepping of 1.
+   Linux 3.16.7-29-desktop #1 SMP PREEMPT (6be6a97) x86_64 GNU/Linux
    openSUSE 13.2 (Harlequin) (x86_64)
    gnuplot 4.6 patchlevel 5
 ```
