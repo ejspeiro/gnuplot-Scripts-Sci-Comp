@@ -77,7 +77,7 @@ set y2tics
 set zlabel "$u(x,y)$"
 
 # Title and legend.
-set title "Control Solution"
+set title "Computed Solution"
 unset key
 
 # View coordinates of the centers:
