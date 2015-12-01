@@ -21,7 +21,12 @@ they intend to plot.
   2. Control.
   3. Comparison of Computed with Control.
 
-2. Matrices.
+2. 2D scalar fields.
+  1. Computed.
+  2. Control.
+  3. Comparison of Computed with Control.
+
+3. Matrices.
   1. Sparse Matrix.
 
 ## 3. Tested with...
