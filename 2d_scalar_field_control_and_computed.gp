@@ -1,8 +1,8 @@
-# \file 1d_scalar_field_control_and_computed.gp
+# \file 2d_scalar_field_control_and_computed.gp
 #
-# \brief 1D scalar fields that are computed and compared against control.
+# \brief 2D scalar fields that are computed and compared against control.
 #
-# When a 1D scalar field is computed, and data from a control field is
+# When a 2D scalar field is computed, and data from a control field is
 # available, use this script to plot both.
 #
 # \warning Not intended to be a general solution but a minimal guidance.
@@ -35,9 +35,9 @@
 
 reset
 
-dat_file_name = "1d_scalar_field_control_and_computed"
-control_dat_file_name = "1d_scalar_field_control"
-computed_dat_file_name = "1d_scalar_field_computed"
+dat_file_name = "2d_scalar_field_control_and_computed"
+control_dat_file_name = "2d_scalar_field_control"
+computed_dat_file_name = "2d_scalar_field_computed"
 
 # Terminals.
 # wxt terminal (wxWidgets library) for live rendering.
@@ -71,8 +71,13 @@ set ylabel "$u(x)$"
 set title "Control and Computed Solution"
 set key bmargin center horizontal
 
-plot \
-  control_dat_file_name.".dat" u 1:2:2:xtic(1) title "Control" \
+# View coordinates of the centers:
+splot control_dat_file_name.".dat" u 1:2:3:xticlabels(1):yticlabels(2) \
   w lp ls 1 palette, \
-  1d_scalar_field_computed.".dat" u 1:2:2:xtic(1) title "Computed" \
+  computed_dat_file_name.".dat" u 1:2:3:xticlabels(1):yticlabels(2) \
   w p ls 2 palette
+
+# Uncomment next line to view coordinates of the cell edges of the grid instead:
+splot control_dat_file_name.".dat" u 1:2:3 w lp ls 1 palette, \
+  computed_dat_file_name.".dat" u 1:2:3 w p ls 2 palette
+  

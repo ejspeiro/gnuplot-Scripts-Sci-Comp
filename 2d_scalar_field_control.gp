@@ -82,7 +82,7 @@ unset key
 
 # View coordinates of the centers:
 splot data_file_name.".dat" u 1:2:3:xticlabels(1):yticlabels(2) \
-  w points pt 7 palette
+  w lp ls 1 palette
 
 # Uncomment next line to view coordinates of the cell edges of the grid instead:
 splot data_file_name.".dat" u 1:2:3 w lp ls 1 palette
