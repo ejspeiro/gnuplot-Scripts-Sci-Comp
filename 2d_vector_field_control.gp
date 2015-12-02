@@ -1,11 +1,10 @@
-# \file 2d_scalar_field_control_and_computed.gp
+# \file 2d_vector_field_control.gp
 #
-# \brief 2D scalar fields that are computed and compared against control.
+# \brief Plots 2D vector fields that are used for control in numerical methods.
 #
-# When a 2D scalar field is computed, and data from a control field is
-# available, use this script to plot both.
+# When a 2D vector field is taken as control, use this script to plot it.
 #
-# \warning Not intended to be a general solution but a minimal guidance.
+# \warning Not intended to be a general solution gut a minimal guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - esanchez at mail dot sdsu dot edu
 
@@ -35,9 +34,7 @@
 
 reset
 
-dat_file_name = "2d_scalar_field_control_and_computed"
-control_dat_file_name = "2d_scalar_field_control"
-computed_dat_file_name = "2d_scalar_field_computed"
+dat_file_name = "2d_vector_field_control"
 
 # Terminals.
 # wxt terminal (wxWidgets library) for live rendering.
@@ -51,17 +48,16 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 # set terminal epslatex standalone size 13cm,9.75cm color colortext 10
 # set output dat_file_name.".tex"
 
-set termoption dash
+# Data manipulation.
+scalex = 0.075
+scaley = 0.075
+
+pl(xx,yy) = scalex*(xx + yy)/sqrt(xx**2 + yy**2)
+ql(xx,yy) = scaley*(xx + yy)/sqrt(xx**2 + yy**2)
 
 # Data visualization.
-# View as a 2D map:
-# set view map
-# View as a 3D surface where z = u(x,y):
-set view 60,340
-# Style 1 for analytic/control data.
-set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
-# Style 2 for computed data.
-set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
+# Style for analytic/control data on cell edges.
+set style line 1 lt 2 lc rgb 'black' lw 1 pt 1 ps 2
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Axes.
@@ -72,18 +68,11 @@ set xlabel "$x$"
 set x2tics
 set ylabel "$y$"
 set y2tics
-set zlabel "$u(x,y)$"
 
 # Title and legend.
-set title "Control and Computed Solution"
+set title "Control Solution"
 set key bmargin center horizontal
 
-# View coordinates of the centers:
-splot control_dat_file_name.".dat" u 1:2:3:xticlabels(1):yticlabels(2) \
-  w lp ls 1 palette, \
-  computed_dat_file_name.".dat" u 1:2:3:xticlabels(1):yticlabels(2) \
-  w p ls 2 palette
-
-# Uncomment next line to view coordinates of the cell edges of the grid instead:
-splot control_dat_file_name.".dat" u 1:2:3 w lp ls 1 palette, \
-  computed_dat_file_name.".dat" u 1:2:3 w p ls 2 palette
+plot dat_file_name.".dat" w p ls 1 title "Domain",\
+     dat_file_name.".dat" u 1:2:(pl($3,$4)):(ql($3,$4)):($3 + $4) \
+      w vectors head filled palette title "$v(x,y)$"
