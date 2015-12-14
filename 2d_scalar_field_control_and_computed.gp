@@ -57,7 +57,7 @@ set termoption dash
 # View as a 2D map:
 # set view map
 # View as a 3D surface where z = u(x,y):
-set view 60,340
+set view 66,16
 # Style 1 for analytic/control data.
 set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 # Style 2 for computed data.
@@ -72,6 +72,7 @@ set xlabel "$x$"
 set x2tics
 set ylabel "$y$"
 set y2tics
+set ticslevel 0
 set zlabel "$u(x,y)$"
 
 # Title and legend.

@@ -1,8 +1,8 @@
-# \file 2d_scalar_field_computed.gnu
+# \file 3d_scalar_field_control.gp
 #
-# \brief Plot 2D scalar fields that are computed by some algorithm.
+# \brief Plots 3D scalar fields that are used for control in numerical methods.
 #
-# When a 2D scalar field is computed, use this script to plot it.
+# When a 3D scalar field is taken as control, use this script to plot it.
 #
 # \warning Not intended to be a general solution gut a minimal guidance.
 #
@@ -34,7 +34,7 @@
 
 reset
 
-data_file_name = "2d_scalar_field_computed"
+data_file_name = "3d_scalar_field_control"
 
 # Terminals.
 # wxt terminal (wxWidgets library) for live rendering.
@@ -51,15 +51,12 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 set termoption dash
 
 # Data visualization.
-# View as a 2D map:
-# set view map
-# View as a 3D surface where z = u(x,y):
 set view 66,16
-# Style for computed data.
-set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
+# Style for analytic/control data.
+set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
-# Uncomment next line for surface hiding in case of a 3D surface:
-# set hidden3d
+# Uncomment next line for surface hiding:
+set hidden3d
 
 # Contours:
 # set contour surface
@@ -75,15 +72,15 @@ set x2tics
 set ylabel "$y$"
 set y2tics
 set ticslevel 0
-set zlabel "$u(x,y)$"
+set zlabel "$z$"
 
 # Title and legend.
-set title "Computed Solution"
+set title "Control Solution"
 unset key
 
 # View coordinates of the centers:
-splot data_file_name.".dat" u 1:2:3:xticlabels(1):yticlabels(2) \
-  w p ls 2 palette
+splot data_file_name.".dat" u 1:2:3:4:xticlabels(1):yticlabels(2):zticlabels(3)\
+  w p ls 1 palette
 
 # Uncomment next line to view coordinates of the cell edges of the grid instead:
-splot data_file_name.".dat" u 1:2:3 w p ls 2 palette
+splot data_file_name.".dat" u 1:2:3:4 w p ls 1 palette

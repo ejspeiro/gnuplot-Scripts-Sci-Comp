@@ -1,8 +1,8 @@
-# \file 2d_scalar_field_control.gnu
+# \file 2d_scalar_field_control.gp
 #
 # \brief Plots 2D scalar fields that are used for control in numerical methods.
 #
-# When a 1D scalar field is taken as control, use this script to plot it.
+# When a 2D scalar field is taken as control, use this script to plot it.
 #
 # \warning Not intended to be a general solution gut a minimal guidance.
 #
@@ -54,7 +54,7 @@ set termoption dash
 # View as a 2D map:
 # set view map
 # View as a 3D surface where z = u(x,y):
-set view 60,340
+set view 66,16
 # Style for analytic/control data.
 set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
@@ -74,6 +74,7 @@ set xlabel "$x$"
 set x2tics
 set ylabel "$y$"
 set y2tics
+set ticslevel 0
 set zlabel "$u(x,y)$"
 
 # Title and legend.
