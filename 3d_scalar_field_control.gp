@@ -53,7 +53,7 @@ set termoption dash
 # Data visualization.
 set view 66,16
 # Style for analytic/control data.
-set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
+set style line 1 lw 0 pt 7 ps 0.5
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 # Uncomment next line for surface hiding:
 set hidden3d
@@ -80,7 +80,7 @@ unset key
 
 # View coordinates of the centers:
 splot data_file_name.".dat" u 1:2:3:4:xticlabels(1):yticlabels(2):zticlabels(3)\
-  w p ls 1 palette
+  w lp ls 1 palette
 
 # Uncomment next line to view coordinates of the cell edges of the grid instead:
-splot data_file_name.".dat" u 1:2:3:4 w p ls 1 palette
+# splot data_file_name.".dat" u 1:2:3 w lp ls 1 palette
