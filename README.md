@@ -1,6 +1,6 @@
 # gnuplot: Scripts for Scientific Computing.
 
-By: **Eduardo J. Sanchez, Ph.D. - esanchez at mail dot sdsu dot edu**
+By: **Eduardo J. Sanchez, PhD - esanchez at mail dot sdsu dot edu**
     __________________________________________________________________
 
 ## 1. Description
