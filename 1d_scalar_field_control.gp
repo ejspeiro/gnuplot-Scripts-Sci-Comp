@@ -56,6 +56,12 @@ set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Axes.
+
+# Uncomment to plot on log scale for each axis respectively:
+# set logscale x
+# set logscale y
+# set logscale xy
+
 set autoscale fix
 set grid
 set format '$%g$'
