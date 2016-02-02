@@ -1,8 +1,12 @@
-# \file 1d_scalar_field_control.gp
+# \file 1d_scalar_fields_control.gp
 #
 # \brief Plots 1D scalar fields that are used for control in numerical methods.
 #
 # When a 1D scalar field is taken as control, use this script to plot it.
+#
+# \sa
+# http://stelweb.asu.cas.cz/~nemeth/work/stuff/gnuplot/gnuplot-line-and-point-
+# types-bw.png
 #
 # \warning Not intended to be a general solution but a minimal guidance.
 #
@@ -34,7 +38,7 @@
 
 reset
 
-dat_file_name = "1d_scalar_field_control"
+dat_file_name = "1d_scalar_fields_control"
 
 # Terminals.
 # wxt terminal (wxWidgets library) for live rendering.
@@ -51,15 +55,20 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 set termoption dash
 
 # Data visualization.
+# Style for analytic/control data.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
-# Style for analytic/control data.
-set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
+set style line 1 lt 2 lc rgb 'black' lw 1 pt 1 ps 0.9
+set style line 2 lt 2 lc rgb 'black' lw 1 pt 2 ps 0.9
+set style line 3 lt 2 lc rgb 'black' lw 1 pt 3 ps 0.9
+set style line 4 lt 2 lc rgb 'black' lw 1 pt 4 ps 0.9
+
+# Just keep adding as you need to...
 
 # Axes.
 
 # Uncomment to plot on log scale for each axis respectively:
-# set logscale x
+set logscale x
 # set logscale y
 # set logscale xy
 
@@ -67,10 +76,20 @@ set autoscale fix
 set grid
 set format '$%g$'
 set xlabel "$x$"
-set ylabel "$u(x)$"
+set ylabel "$u_i(x)$"
 
 # Title and legend.
-set title "Control Solution"
-unset key
+set title "Comparison of Control Solutions"
+set key below box vertical
 
-plot dat_file_name.".dat" u 1:2:2:xtic(1) w lp ls 1 palette
+plot \
+  '1d_scalar_fields_control_1.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 1 palette \
+  title "$i = 1$", \
+  '1d_scalar_fields_control_2.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 2 palette \
+  title "$i = 2$", \
+  '1d_scalar_fields_control_3.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 3 palette \
+  title "$i = 3$", \
+  '1d_scalar_fields_control_4.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 4 palette \
+  title "$i = 4$"
+
+# Just keep adding as you need to...

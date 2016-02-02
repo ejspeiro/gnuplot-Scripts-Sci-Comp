@@ -51,9 +51,10 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 set termoption dash
 
 # Data visualization.
+set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
+
 # Style for computed data.
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
-set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Axes.
 
