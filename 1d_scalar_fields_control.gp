@@ -80,7 +80,7 @@ set ylabel "$u_i(x)$"
 
 # Title and legend.
 set title "Comparison of Control Solutions"
-set key below box vertical
+set key below box height 1.25
 
 plot \
   '1d_scalar_fields_control_1.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 1 palette \
