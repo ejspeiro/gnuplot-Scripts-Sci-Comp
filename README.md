@@ -20,6 +20,7 @@ they intend to plot.
   1. Computed.
   2. Control.
   3. Comparison of Computed with Control.
+  4. Comparison of multiple Control.
 
 2. 2D scalar fields.
   1. Computed.
@@ -44,6 +45,6 @@ So far, I have tested these scripts on these architectures:
 
 Feel free to contact me with suggestions or corrections:
 
-**Eduardo J. Sanchez, Ph.D. - esanchez at mail dot sdsu dot edu** - @ejspeiro
+**Eduardo J. Sanchez, PhD - esanchez at mail dot sdsu dot edu** - @ejspeiro
 
 Thanks and happy viewing!
