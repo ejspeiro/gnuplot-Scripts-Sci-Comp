@@ -8,7 +8,7 @@ By: **Eduardo J. Sanchez, PhD - esanchez at mail dot sdsu dot edu**
 A very humble and minimalistic suite of **gnuplot** scripts to visualize common
 results in Scientific Computing.
 
-I collect them here as I develop them for my own software,
+I collect them here as I develop them for my own software library,
 [the Mimetic Methods Toolkit (MTK)](https://github.com/ejspeiro/MTK).
 
 ## 2. Index of Scripts
@@ -17,17 +17,27 @@ The scripts are classified according to the mathematical nature of the data
 they intend to plot.
 
 1. 1D scalar fields.
-  1. Computed.
-  2. Control.
-  3. Comparison of Computed with Control.
+  1. Control.
+  2. Computed.
+  3. Comparison of Control with Computed.
   4. Comparison of multiple Control.
 
-2. 2D scalar fields.
+2. 1D vector fields.
   1. Computed.
   2. Control.
-  3. Comparison of Computed with Control.
 
-3. Matrices.
+3. 2D scalar fields.
+  1. Control.
+  2. Computed.
+  3. Comparison of Control with Computed.
+
+4. 2D vector fields.
+  1. Control.
+
+5. 3D scalar fields.
+  1. Control.
+
+6. Matrices.
   1. Sparse Matrix.
 
 ## 3. Tested with...
