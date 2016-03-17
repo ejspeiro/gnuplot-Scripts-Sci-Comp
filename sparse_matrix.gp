@@ -38,28 +38,34 @@ reset
 dat_file_name = "sparse_matrix"
 
 # Terminals.
-# wxt terminal (wxWidgets library) for live rendering.
+
+# Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
-# png terminal for disk storage.
+# Set png terminal for disk storage.
 # set terminal png
 # set output dat_file_name.".png"
 
-# epslatex terminal for publication.
+# Set epslatex terminal for publication.
 # set terminal epslatex standalone size 13cm,9.75cm color colortext 10
 # set output dat_file_name.".tex"
 
 set termoption dash
 
-# Data manipulation.
+# Data Manipulation.
+
 tol = 0.0000001
+
 f(x) = abs(x - 0.0) > tol? 100: 0.0
 
-# Data visualization.
+# Data Visualization.
+
 set palette defined (0 '#ffffff', 1 '#000000')
+
 unset colorbox
 
 # Axes.
+
 set autoscale fix
 set grid
 set xlabel "Column"
@@ -67,8 +73,11 @@ set x2tics
 set ylabel "Row"
 set yrange [] reverse
 
-# Title and legend.
+# Title and Legend.
+
 set title "A Sparse Matrix"
 unset key
+
+# Plot!
 
 plot dat_file_name.".dat" u 2:1:(f($3))  w p pt 5 ps 1.0 palette

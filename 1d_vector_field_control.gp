@@ -37,49 +37,49 @@ reset
 dat_file_name = "1d_vector_field_control"
 
 # Terminals.
-# wxt terminal (wxWidgets library) for live rendering.
+
+# Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
-# png terminal for disk storage.
+# Set png terminal for disk storage.
 # set terminal png
 # set output dat_file_name.".png"
 
-# epslatex terminal for publication. (Proportions: 1024/768).
+# Set epslatex terminal for publication. (Proportions: 1024/768).
 # set terminal epslatex standalone size 13cm,9.75cm color colortext 10
 # set output dat_file_name.".tex"
 
 set termoption dash
 
 # Data manipulation.
+
 scalex = 0.075
 
 pl(xx) = scalex*(xx)/sqrt(xx**2)
 
-# Style for analytic/control data on cell edges.
-set style line 1 lt 2 lc rgb 'black' lw 1 pt 1 ps 2
-
 # Data visualization.
+
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
+
+# Style for analytic/control data on cell edges.
+set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 
 # Axes.
 
-# Uncomment to plot on log scale for each axis respectively:
-# set logscale x
-# set logscale y
-# set logscale xy
-
 set autoscale fix
 set grid
-set format '$%g$'
+set format "$%g$"
 set xlabel "$x$"
-set ylabel "$v(x)$"
+set ylabel "$||v(x)||$"
 
-# Title and legend.
-set title "Control Solution"
+# Title and Legend.
+
+set title "Control 1D Vector Field"
 unset key
 
-# plot dat_file_name.".dat" u 1:2:2 w lp ls 1 palette
+# Plot!
 
-plot dat_file_name.".dat" w p ls 1 title "Domain",\
-     dat_file_name.".dat" u 1:2:(pl($3)):(pl($3)):($3 + $4) \
-      w vectors head filled palette title "$v(x,y)$"
+plot \
+  dat_file_name.".dat" u 1:2:2:xtic(1) w lp ls 1 palette
+#   dat_file_name.".dat" u 1:2:(pl($3)):(pl($3)):($3) \
+#     w vectors head filled palette title "$v(x,y)$"
