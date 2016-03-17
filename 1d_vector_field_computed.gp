@@ -61,7 +61,7 @@ pl(xx) = scalex*(xx)/sqrt(xx**2)
 
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
-# Style for analytic/control data on cell edges.
+# Style for computed data.
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
 
 # Axes.
