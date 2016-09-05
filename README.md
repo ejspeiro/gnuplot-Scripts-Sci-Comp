@@ -1,7 +1,6 @@
 # gnuplot: Scripts for Scientific Computing.
 
 By: **Eduardo J. Sanchez, PhD - esanchez at mail dot sdsu dot edu**
-    __________________________________________________________________
 
 ## 1. Description
 
@@ -34,7 +33,7 @@ results (control data).
   3. Comparison of control with computed: 2d_scalar_field_control_and_computed.gp
 
 4. 2D vector fields.
-  1. Control.
+  1. Control: 2d_vector_field_control.gp
 
 5. 3D scalar fields.
   1. Control.
