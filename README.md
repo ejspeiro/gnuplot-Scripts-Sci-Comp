@@ -36,7 +36,7 @@ results (control data).
   1. Control: 2d_vector_field_control.gp
 
 5. 3D scalar fields.
-  1. Control.
+  1. Control: 3d_scalar_field_control.gp
 
 6. Matrices.
   1. Sparse Matrix.
