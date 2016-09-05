@@ -31,7 +31,7 @@ results (control data).
 3. 2D scalar fields.
   1. Control.
   2. Computed.
-  3. Comparison of Control with Computed.
+  3. Comparison of control with computed.
 
 4. 2D vector fields.
   1. Control.
@@ -57,6 +57,6 @@ So far, I have tested these scripts on this architecture:
 
 Feel free to contact me with suggestions or corrections:
 
-**Eduardo J. Sanchez, PhD - esanchez at mail dot sdsu dot edu** - @ejspeiro
+**Eduardo J. Sanchez, PhD - eduardo.sanchez at bsc.es** - @ejspeiro
 
 Thanks and happy viewing!

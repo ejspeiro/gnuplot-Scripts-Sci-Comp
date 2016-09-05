@@ -6,11 +6,11 @@
 #
 # \warning Not intended to be a general solution gut a minimal guidance.
 #
-# \author: Eduardo J. Sanchez (ejspeiro) - esanchez at mail dot sdsu dot edu
+# \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2015 Eduardo Sanchez
+# Copyright (c) 2016 Eduardo Sanchez
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -82,9 +82,9 @@ set y2tics
 set ticslevel 0
 set zlabel "$u(x,y)$"
 
-# Title and Legend.
+# Title and legend.
 
-set title "Control 2D Scalar Field"
+set title "Control 2D scalar field"
 unset key
 
 # Plot!
