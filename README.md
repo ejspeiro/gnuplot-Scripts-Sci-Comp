@@ -25,8 +25,8 @@ results (control data).
   4. Comparison of multiple control: 1d_scalar_fields_control.gp
 
 2. 1D vector fields.
-  1. Computed.
-  2. Control.
+  1. Control: 1d_vector_field_control.gp
+  2. Computed.
 
 3. 2D scalar fields.
   1. Control.
@@ -44,7 +44,7 @@ results (control data).
 
 ## 3. Tested with...
 
-So far, I have tested these scripts on these architectures:
+So far, I have tested these scripts on this architecture:
 
 ```
 1. Intel(R) Core(TM) i7-4600U CPU 2.10 GHz 4096 KB of cache and a stepping of 1.
