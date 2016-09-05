@@ -19,10 +19,10 @@ data), and some data is used as a reference against with to double check
 results (control data).
 
 1. 1D scalar fields.
-  1. Control.
-  2. Computed.
-  3. Comparison of control with computed.
-  4. Comparison of multiple control.
+  1. Control: 1d_scalar_field_control.gp
+  2. Computed: 1d_scalar_field_computed.gp
+  3. Comparison of control with computed: 1d_scalar_field_control_and_computed.gp
+  4. Comparison of multiple control: 1d_scalar_fields_control.gp
 
 2. 1D vector fields.
   1. Computed.

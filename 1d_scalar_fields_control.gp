@@ -11,11 +11,11 @@
 #
 # \warning Not intended to be a general solution but a minimal guidance.
 #
-# \author: Eduardo J. Sanchez (ejspeiro) - esanchez at mail dot sdsu dot edu
+# \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2015 Eduardo Sanchez
+# Copyright (c) 2016 Eduardo Sanchez
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -81,9 +81,9 @@ set format "$%g$"
 set xlabel "$x$"
 set ylabel "$u_i(x)$"
 
-# Title and Legend.
+# Title and legend.
 
-set title "Comparison of Control 1D Scalar Fields"
+set title "Comparison of control 1D scalar fields"
 set key below box height 1.25
 
 # Plot!
@@ -98,4 +98,4 @@ plot \
   '1d_scalar_fields_control_4.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 4 palette \
   title "$i = 4$"
 
-# Just keep adding as you need to...
+# Just keep adding references to DAT files as you need to...
