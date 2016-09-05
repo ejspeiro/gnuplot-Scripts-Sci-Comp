@@ -7,11 +7,11 @@
 #
 # \warning Not intended to be a general solution but a minimal guidance.
 #
-# \author: Eduardo J. Sanchez (ejspeiro) - esanchez at mail dot sdsu dot edu
+# \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2015 Eduardo Sanchez
+# Copyright (c) 2016 Eduardo Sanchez
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -52,13 +52,13 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data Manipulation.
+# Data manipulation.
 
 tol = 0.0000001
 
 f(x) = abs(x - 0.0) > tol? 100: 0.0
 
-# Data Visualization.
+# Data visualization.
 
 set palette defined (0 '#ffffff', 1 '#000000')
 
@@ -73,9 +73,9 @@ set x2tics
 set ylabel "Row"
 set yrange [] reverse
 
-# Title and Legend.
+# Title and legend.
 
-set title "A Sparse Matrix"
+set title "A sparse matrix"
 unset key
 
 # Plot!

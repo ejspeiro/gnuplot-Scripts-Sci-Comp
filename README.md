@@ -4,13 +4,18 @@ By: **Eduardo J. Sanchez, PhD - esanchez at mail dot sdsu dot edu**
 
 ## 1. Description
 
-A very humble and minimalistic suite of **gnuplot** scripts to visualize common
-results in Scientific Computing.
+A minimalistic suite of **gnuplot** scripts to visualize common results in
+scientific computing. These scripts are not intended to be a general solution
+to visualize every possible result. Instead these should be used as a starting
+point to construct tailored scripts for any data set.
+
+Also, using gnuplot is not usually intended for high-performance visualization.
+Other tools should be used, such as ParaView.
 
 I collect them here as I develop them for my own software library,
 [the Mimetic Methods Toolkit (MTK)](https://github.com/ejspeiro/MTK).
 
-## 2. Index of Scripts
+## 2. Index of scripts
 
 The scripts are classified according to the mathematical nature of the data
 they intend to plot. That is, some data is the result of a computation (computed
@@ -39,9 +44,9 @@ results (control data).
   1. Control: 3d_scalar_field_control.gp
 
 6. Matrices.
-  1. Sparse Matrix.
+  1. Sparse matrix: sparse_matrix.gp
 
-## 3. Tested with...
+## 3. Tested architectures
 
 So far, I have tested these scripts on this architecture:
 
@@ -52,10 +57,10 @@ So far, I have tested these scripts on this architecture:
    gnuplot 4.6 patchlevel 5
 ```
 
-## 4. Contact, Support, and Credits
+## 4. Contact, support and credits
 
 Feel free to contact me with suggestions or corrections:
 
 **Eduardo J. Sanchez, PhD - eduardo.sanchez at bsc.es** - @ejspeiro
 
-Thanks and happy viewing!
+Thanks and happy rendering!
