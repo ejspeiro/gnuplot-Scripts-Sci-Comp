@@ -21,8 +21,8 @@ results (control data).
 1. 1D scalar fields.
   1. Control.
   2. Computed.
-  3. Comparison of Control with Computed.
-  4. Comparison of multiple Control.
+  3. Comparison of control with computed.
+  4. Comparison of multiple control.
 
 2. 1D vector fields.
   1. Computed.
