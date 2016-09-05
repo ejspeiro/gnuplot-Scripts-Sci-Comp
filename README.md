@@ -14,7 +14,9 @@ I collect them here as I develop them for my own software library,
 ## 2. Index of Scripts
 
 The scripts are classified according to the mathematical nature of the data
-they intend to plot.
+they intend to plot. That is, some data is the result of a computation (computed
+data), and some data is used as a reference against with to double check
+results (control data).
 
 1. 1D scalar fields.
   1. Control.
