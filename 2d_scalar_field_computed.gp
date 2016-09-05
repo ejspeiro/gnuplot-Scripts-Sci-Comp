@@ -1,4 +1,4 @@
-# \file 2d_scalar_field_computed.gnu
+# \file 2d_scalar_field_computed.gp
 #
 # \brief Plot 2D scalar fields that are computed by some algorithm.
 #
@@ -6,11 +6,11 @@
 #
 # \warning Not intended to be a general solution gut a minimal guidance.
 #
-# \author: Eduardo J. Sanchez (ejspeiro) - esanchez at mail dot sdsu dot edu
+# \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2015 Eduardo Sanchez
+# Copyright (c) 2016 Eduardo Sanchez
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -56,10 +56,10 @@ set termoption dash
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Uncomment to view as a 2D map:
-# set view map
+set view map
 
 # View as a 3D surface where z = u(x,y):
-set view 66,16
+# set view 66,16
 # Uncomment for surface hiding in case of a 3D surface:
 # set hidden3d
 # Uncomment for contours:
@@ -82,9 +82,9 @@ set y2tics
 set ticslevel 0
 set zlabel "$u(x,y)$"
 
-# Title and Legend.
+# Title and legend.
 
-set title "Computed 2D Scalar Field"
+set title "Computed 2D scalar field"
 unset key
 
 # Plot!

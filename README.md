@@ -29,9 +29,9 @@ results (control data).
   2. Computed: 1d_vector_field_computed.gp
 
 3. 2D scalar fields.
-  1. Control.
-  2. Computed.
-  3. Comparison of control with computed.
+  1. Control: 2d_scalar_field_control.gp
+  2. Computed: 2d_scalar_field_computed.gp
+  3. Comparison of control with computed: 2d_scalar_field_control_and_computed.gp
 
 4. 2D vector fields.
   1. Control.
