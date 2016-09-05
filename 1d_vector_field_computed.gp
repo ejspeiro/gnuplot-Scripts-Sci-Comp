@@ -6,11 +6,11 @@
 #
 # \warning Not intended to be a general solution but a minimal guidance.
 #
-# \author: Eduardo J. Sanchez (ejspeiro) - esanchez at mail dot sdsu dot edu
+# \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2015 Eduardo Sanchez
+# Copyright (c) 2016 Eduardo Sanchez
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -51,13 +51,13 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data Manipulation.
+# Data manipulation.
 
 scalex = 0.075
 
 pl(xx) = scalex*(xx)/sqrt(xx**2)
 
-# Data Visualization.
+# Data visualization.
 
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
@@ -72,9 +72,9 @@ set format "$%g$"
 set xlabel "$x$"
 set ylabel "$||v(x)||$"
 
-# Title and Legend.
+# Title and legend.
 
-set title "Computed 1D Vector Field"
+set title "Computed 1D vector field"
 unset key
 
 # Plot!
