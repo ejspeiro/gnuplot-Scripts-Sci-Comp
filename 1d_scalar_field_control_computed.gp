@@ -1,11 +1,11 @@
-# \file 1d_scalar_field_control_and_computed.gp
+# \file 1d_scalar_field_control_computed.gp
 #
 # \brief Plots 1D scalar fields that are computed and compared against control.
 #
 # When a 1D scalar field is computed, and data from a control field is
-# available, use this script to plot them both.
+# available, use this script to plot them both to compare them.
 #
-# \warning Not intended to be a general solution but a minimal guidance.
+# \warning Not intended to be a general solution but a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -35,12 +35,10 @@
 
 reset
 
-dat_file_name = "1d_scalar_field_control_and_computed"
 control_dat_file_name = "1d_scalar_field_control"
 computed_dat_file_name = "1d_scalar_field_computed"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -54,18 +52,16 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
-# Style 1 for analytic/control data.
+# Style 1 for control data.
 set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 
 # Style 2 for computed data.
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
 
-# Axes.
-
+# ----- Axis setup.
 # Uncomment to plot on log scale for each axis respectively:
 # set logscale x
 # set logscale y
@@ -77,13 +73,11 @@ set format "$%g$"
 set xlabel "$x$"
 set ylabel "$u(x)$"
 
-# Title and legend.
-
+# ----- Title and legend setup.
 set title "Control and computed 1D scalar fields"
 set key bmargin center horizontal
 
-# Plot!
-
+# ----- Plot!
 plot \
   control_dat_file_name.".dat" u 1:2:2:xtic(1) title "Control" \
   w lp ls 1 palette, \

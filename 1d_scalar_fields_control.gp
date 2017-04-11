@@ -9,7 +9,7 @@
 # http://stelweb.asu.cas.cz/~nemeth/work/stuff/gnuplot/gnuplot-line-and-point-
 # types-bw.png
 #
-# \warning Not intended to be a general solution but a minimal guidance.
+# \warning Not intended to be a general solution but a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -41,8 +41,7 @@ reset
 
 dat_file_name = "1d_scalar_fields_control"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -56,20 +55,17 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
-# Style for analytic/control data.
+# Style for control data.
 set style line 1 lt 2 lc rgb 'black' lw 1 pt 1 ps 0.9
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 2 ps 0.9
 set style line 3 lt 2 lc rgb 'black' lw 1 pt 3 ps 0.9
 set style line 4 lt 2 lc rgb 'black' lw 1 pt 4 ps 0.9
-
 # Just keep adding as you need to...
 
-# Axes.
-
+# ----- Axis setup.
 # Uncomment to plot on log scale for each axis respectively:
 set logscale x
 # set logscale y
@@ -81,13 +77,11 @@ set format "$%g$"
 set xlabel "$x$"
 set ylabel "$u_i(x)$"
 
-# Title and legend.
-
-set title "Comparison of control 1D scalar fields"
+# ----- Title and legend setup.
+set title "Comparison of control 1D scalar fields in log scale for y"
 set key below box height 1.25
 
-# Plot!
-
+# ----- Plot!
 plot \
   '1d_scalar_fields_control_1.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 1 palette \
   title "$i = 1$", \
@@ -97,5 +91,4 @@ plot \
   title "$i = 3$", \
   '1d_scalar_fields_control_4.dat' u 1:2:2:xtic(1):ytic(2) w lp ls 4 palette \
   title "$i = 4$"
-
-# Just keep adding references to DAT files as you need to...
+# Just keep adding references to dat files as you need to...

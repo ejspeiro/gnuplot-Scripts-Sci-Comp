@@ -1,11 +1,11 @@
-# \file 2d_scalar_field_control_and_computed.gp
+# \file 2d_scalar_field_control_computed.gp
 #
 # \brief 2D scalar fields that are computed and compared against control.
 #
 # When a 2D scalar field is computed, and data from a control field is
 # available, use this script to plot them both.
 #
-# \warning Not intended to be a general solution but a minimal guidance.
+# \warning Not intended to be a general solution but a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -35,12 +35,10 @@
 
 reset
 
-dat_file_name = "2d_scalar_field_control_and_computed"
 control_dat_file_name = "2d_scalar_field_control"
 computed_dat_file_name = "2d_scalar_field_computed"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -54,8 +52,7 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Uncomment to view as a 2D map:
@@ -76,8 +73,7 @@ set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 # Style 2 for computed data.
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
 
-# Axes.
-
+# ----- Axis setup.
 set autoscale fix
 set grid
 set format "$%g$"
@@ -88,13 +84,11 @@ set y2tics
 set ticslevel 0
 set zlabel "$u(x,y)$"
 
-# Title and legend.
-
+# ----- Title and legend setup.
 set title "Control and computed 2D scalar fields"
 set key bmargin center horizontal
 
-# Plot!
-
+# ----- Plot!
 # Uncomment to view coordinates of the centers:
 splot control_dat_file_name.".dat" u 1:2:3:xticlabels(1):yticlabels(2) \
   w lp ls 1 palette, \

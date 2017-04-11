@@ -1,31 +1,29 @@
 # gnuplot: Scripts for Scientific Computing.
 
-By: **Eduardo J. Sanchez, PhD - esanchez at mail dot sdsu dot edu**
+By: **Eduardo J. Sanchez - eduardo.sanchez at bsc.es**
 
 ## 1. Description
 
 A minimalistic suite of **gnuplot** scripts to visualize common results in
 scientific computing. These scripts are not intended to be a general solution
-to visualize every possible result. Instead these should be used as a starting
+to visualize every possible result. Instead these could be used as a starting
 point to construct tailored scripts for any data set.
 
-Also, using gnuplot is not usually intended for high-performance visualization.
-Other tools should be used, such as ParaView.
+gnuplot is not usually intended for high-performance visualization.
 
-I collect them here as I develop them for my own software library,
+I collect these scripts here as I develop them for my own software library,
 [the Mimetic Methods Toolkit (MTK)](https://github.com/ejspeiro/MTK).
 
 ## 2. Index of scripts
 
 The scripts are classified according to the mathematical nature of the data
 they intend to plot. That is, some data is the result of a computation (computed
-data), and some data is used as a reference against with to double check
-results (control data).
+data), and some data is used as a reference to check results (control data).
 
 1. 1D scalar fields.
   1. Control: 1d_scalar_field_control.gp
   2. Computed: 1d_scalar_field_computed.gp
-  3. Comparison of control with computed: 1d_scalar_field_control_and_computed.gp
+  3. Comparison of control with computed: 1d_scalar_field_control_computed.gp
   4. Comparison of multiple control: 1d_scalar_fields_control.gp
 
 2. 1D vector fields.
@@ -35,7 +33,7 @@ results (control data).
 3. 2D scalar fields.
   1. Control: 2d_scalar_field_control.gp
   2. Computed: 2d_scalar_field_computed.gp
-  3. Comparison of control with computed: 2d_scalar_field_control_and_computed.gp
+  3. Comparison of control with computed: 2d_scalar_field_control_computed.gp
 
 4. 2D vector fields.
   1. Control: 2d_vector_field_control.gp
@@ -61,6 +59,6 @@ So far, I have tested these scripts on this architecture:
 
 Feel free to contact me with suggestions or corrections:
 
-**Eduardo J. Sanchez, PhD - eduardo.sanchez at bsc.es** - @ejspeiro
+**Eduardo J. Sanchez - eduardo.sanchez at bsc.es** - @ejspeiro
 
 Thanks and happy rendering!

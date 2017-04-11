@@ -4,7 +4,7 @@
 #
 # When a 3D scalar field is taken as control, use this script to plot it.
 #
-# \warning Not intended to be a general solution gut a minimal guidance.
+# \warning Not intended to be a general solution gut a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -36,8 +36,7 @@ reset
 
 data_file_name = "3d_scalar_field_control"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -51,8 +50,7 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 set view 66,16
@@ -65,11 +63,10 @@ set hidden3d
 # set contour base
 # set contour both
 
-# Style for analytic/control data.
+# Style for control data.
 set style line 1 lw 0 pt 7 ps 0.5
 
-# Axes.
-
+# ----- Axis setup.
 set autoscale fix
 set grid
 set format "$%g$"
@@ -80,13 +77,11 @@ set y2tics
 set ticslevel 0
 set zlabel "$z$"
 
-# Title and legend.
-
+# ----- Title and legend setup.
 set title "Control 3D scalar field"
 unset key
 
-# Plot!
-
+# ----- Plot!
 # Uncomment to view coordinates of the centers:
 splot data_file_name.".dat" u 1:2:3:4:xticlabels(1):yticlabels(2):zticlabels(3)\
   w lp ls 1 palette

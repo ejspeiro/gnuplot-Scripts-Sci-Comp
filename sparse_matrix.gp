@@ -5,7 +5,7 @@
 # Use this script when building sparse matrices, to check their sparsity
 # pattern.
 #
-# \warning Not intended to be a general solution but a minimal guidance.
+# \warning Not intended to be a general solution but a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -37,8 +37,7 @@ reset
 
 dat_file_name = "sparse_matrix"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -52,20 +51,17 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data manipulation.
-
+# ----- Data manipulation setup.
 tol = 0.0000001
 
 f(x) = abs(x - 0.0) > tol? 100: 0.0
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#ffffff', 1 '#000000')
 
 unset colorbox
 
-# Axes.
-
+# ----- Axis setup.
 set autoscale fix
 set grid
 set xlabel "Column"
@@ -73,11 +69,9 @@ set x2tics
 set ylabel "Row"
 set yrange [] reverse
 
-# Title and legend.
-
+# ----- Title and legend setup.
 set title "A sparse matrix"
 unset key
 
-# Plot!
-
+# ----- Plot!
 plot dat_file_name.".dat" u 2:1:(f($3))  w p pt 5 ps 1.0 palette

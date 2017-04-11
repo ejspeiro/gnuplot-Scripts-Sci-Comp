@@ -4,7 +4,7 @@
 #
 # When a 1D vector field is taken as control, use this script to plot it.
 #
-# \warning Not intended to be a general solution but a minimal guidance.
+# \warning Not intended to be a general solution but a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -36,8 +36,7 @@ reset
 
 dat_file_name = "1d_vector_field_control"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -51,35 +50,27 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data manipulation.
-
+# ----- Data manipulation setup.
 scalex = 0.075
 
 pl(xx) = scalex*(xx)/sqrt(xx**2)
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
-# Style for analytic/control data on cell edges.
+# Style for control data on cell edges.
 set style line 1 lt 2 lc rgb 'black' lw 1 pt 7 ps 0.5
 
-# Axes.
-
+# ----- Axis setup.
 set autoscale fix
 set grid
 set format "$%g$"
 set xlabel "$x$"
 set ylabel "$||v(x)||$"
 
-# Title and legend.
-
+# ----- Title and legend setup.
 set title "Control 1D vector field"
 unset key
 
-# Plot!
-
-plot \
-  dat_file_name.".dat" u 1:2:2:xtic(1) w lp ls 1 palette
-#   dat_file_name.".dat" u 1:2:(pl($3)):(pl($3)):($3) \
-#     w vectors head filled palette title "$v(x,y)$"
+# ----- Plot!
+plot dat_file_name.".dat" u 1:2:2:xtic(1) w lp ls 1 palette

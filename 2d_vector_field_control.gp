@@ -4,7 +4,7 @@
 #
 # When a 2D vector field is taken as control, use this script to plot it.
 #
-# \warning Not intended to be a general solution gut a minimal guidance.
+# \warning Not intended to be a general solution gut a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -36,8 +36,7 @@ reset
 
 dat_file_name = "2d_vector_field_control"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -49,23 +48,20 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 # set terminal epslatex standalone size 13cm,9.75cm color colortext 10
 # set output dat_file_name.".tex"
 
-# Data manipulation.
-
-scalex = 0.075
-scaley = 0.075
+# ----- Data manipulation setup.
+scalex = 0.025
+scaley = 0.025
 
 pl(xx,yy) = scalex*(xx + yy)/sqrt(xx**2 + yy**2)
 ql(xx,yy) = scaley*(xx + yy)/sqrt(xx**2 + yy**2)
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Style for analytic/control data on cell edges.
 set style line 1 lt 2 lc rgb 'black' lw 1 pt 1 ps 2
 
-# Axes.
-
+# ----- Axis setup.
 set autoscale fix
 set grid
 set format "$%g$"
@@ -74,13 +70,11 @@ set x2tics
 set ylabel "$y$"
 set y2tics
 
-# Title and legend.
-
+# ----- Title and legend setup.
 set title "Control 2D vector field"
 set key bmargin center horizontal
 
-# Plot!
-
+# ----- Plot!
 plot dat_file_name.".dat" w p ls 1 title "Domain",\
      dat_file_name.".dat" u 1:2:(pl($3,$4)):(ql($3,$4)):($3 + $4) \
       w vectors head filled palette title "$v(x,y)$"

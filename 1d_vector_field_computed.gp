@@ -4,7 +4,7 @@
 #
 # When a 1D vector field is computed, use this script to plot it.
 #
-# \warning Not intended to be a general solution but a minimal guidance.
+# \warning Not intended to be a general solution but a minimalistic guidance.
 #
 # \author: Eduardo J. Sanchez (ejspeiro) - eduardo.sanchez at bsc.es
 
@@ -34,10 +34,9 @@
 
 reset
 
-dat_file_name = "1d_vector_field_computed"
+dat_file_name = "1d_vector_field_control"
 
-# Terminals.
-
+# ----- Terminal setup.
 # Set wxt terminal (wxWidgets library) for live rendering.
 set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
@@ -51,32 +50,27 @@ set terminal wxt size 1024,768 enhanced font 'Verdana,10' persist
 
 set termoption dash
 
-# Data manipulation.
-
+# ----- Data manipulation setup.
 scalex = 0.075
 
 pl(xx) = scalex*(xx)/sqrt(xx**2)
 
-# Data visualization.
-
+# ----- Data visualization setup.
 set palette defined (0 '#0000ff', 1 '#00ff00', 2 '#ff0000')
 
 # Style for computed data.
 set style line 2 lt 2 lc rgb 'black' lw 1 pt 7 ps 1
 
-# Axes.
-
+# ----- Axis setup.
 set autoscale fix
 set grid
 set format "$%g$"
 set xlabel "$x$"
 set ylabel "$||v(x)||$"
 
-# Title and legend.
-
+# ----- Title and legend setup.
 set title "Computed 1D vector field"
 unset key
 
-# Plot!
-
+# ----- Plot!
 plot dat_file_name.".dat" u 1:2:2:xtic(1) w p ls 2 palette
